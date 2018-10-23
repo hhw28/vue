@@ -5,7 +5,7 @@
       猜你喜欢
     </div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of list" :key="item.id">
         <div class="item-img">
           <img :src="item.imgUrl">
         </div>
@@ -27,33 +27,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/b6/662fc49d1d26a5a7775cf6b7f8b4ecec.water.jpg_200x200_7dec115f.jpg',
-        title: '杭州野生动物世界',
-        commendNum: '5862',
-        price: '170',
-        desc: '这里最近很火哦，好多人都在点评它呢！',
-        address: '富阳市'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/14/14b8a787d6e901f6a3.img.jpg_200x200_4a447e3c.jpg',
-        title: '杭州云曼温泉',
-        commendNum: '968',
-        price: '125',
-        address: '萧山'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1809/6b/6b0d71ae741a583da3.img.jpg_200x200_dc19cbb1.jpg',
-        title: '杭州乐园',
-        commendNum: '5466',
-        price: '120',
-        desc: '杭州本月收藏Top5╰(￣▽￣)╭',
-        address: '萧山'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

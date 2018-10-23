@@ -4,7 +4,7 @@
       周末去哪儿
     </div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of list" :key="item.id">
         <div class="item-img">
           <img :src="item.imgUrl">
         </div>
@@ -20,25 +20,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/4e/3e87ee62e59cdb.jpg_r_640x214_fe6cc902.jpg',
-        title: '杭州必游TOP10',
-        desc: '杭州，前世今生与你有一场美丽约会'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/9f/7d45cc38259e0.jpg_r_640x214_156f4299.jpg',
-        title: '承载杭城的历史之地',
-        desc: '饱经沧桑的地方诉述着这座城的段段衷肠'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/8a/4cbf58944de788.jpg_r_640x214_1893da0a.jpg',
-        title: '秋时景致美',
-        desc: '火红的秋天，是杭州一年中最美的季节'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
