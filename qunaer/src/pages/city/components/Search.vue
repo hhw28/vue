@@ -25,4 +25,5 @@ export default {
       border-radius .06rem
       color #666
       padding 0 .1rem
+
 </style>
