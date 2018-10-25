@@ -38,6 +38,11 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
+    // 当使用keep-alive组件的时候，会有activated钩子和deactivated钩子
+    // 当使用当离开该页面的时候，会触发deactivated钩子，此时需清除全局事件避免该事件在其他页面也被触发
   }
 }
 </script>
