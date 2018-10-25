@@ -31,7 +31,7 @@ export default{
       iconList: [],
       recommendList: [],
       weekendList: [],
-      lastcity: ''
+      lastCity: ''
     }
   },
   computed: {
