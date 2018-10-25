@@ -5,7 +5,12 @@
       猜你喜欢
     </div>
     <ul>
-      <li class="item" v-for="item of list" :key="item.id">
+      <router-link tag="li"
+                   class="item"
+                   v-for="item of list"
+                   :key="item.id"
+                   :to="'/detail/' + item.id"
+      >
         <div class="item-img">
           <img :src="item.imgUrl">
         </div>
@@ -19,7 +24,7 @@
           </p>
           <p class="item-desc" v-if="item.desc">{{item.desc}}</p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
