@@ -62,6 +62,7 @@ export default {
       line-height .72rem
       background rgba(0,0,0,.5)
     .header-fixed
+      z-index 2
       background $bgColor
       color #fff
       width 100%

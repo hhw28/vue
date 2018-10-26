@@ -45,7 +45,7 @@ export default {
   .container >>> .swiper-container
     overflow inherit
   .container
-    z-index 1
+    z-index 99
     display flex
     flex-direction column
     justify-content center
@@ -58,7 +58,7 @@ export default {
     .wrapper
       width 100%
       height 0
-      padding-bottom 60%
+      padding-bottom 100%
       .swiper-img
         width 100%
       .swiper-pagination
