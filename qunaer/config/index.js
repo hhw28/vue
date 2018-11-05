@@ -7,7 +7,7 @@ const path = require('path')
 module.exports = {
   dev: {
 
-    // Paths
+    // Paths 服务器地址
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
@@ -57,7 +57,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/project',
 
     /**
      * Source Maps

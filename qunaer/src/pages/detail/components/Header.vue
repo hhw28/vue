@@ -4,7 +4,7 @@
       <span class="iconfont">&#xe624;</span>
     </router-link>
     <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-      标题
+      {{this.title}}
       <router-link tag="div" to="/" class="header-fixed-back">
         <span class="iconfont">&#xe624;</span>
       </router-link>
@@ -15,6 +15,9 @@
 <script>
 export default {
   name: 'DetailHeader',
+  props: {
+    title: String
+  },
   data () {
     return {
       showAbs: true,
@@ -79,4 +82,5 @@ export default {
         position absolute
         top 0
         left .16rem
+
 </style>

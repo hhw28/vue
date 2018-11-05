@@ -4,7 +4,7 @@
                    :bannerimg="bannerImg"
                   :imgs="gallaryImgs">
     </detail-banner>
-    <detail-header></detail-header>
+    <detail-header :title="sightName"></detail-header>
     <div class="content">
       <detail-list :list="categoryList"></detail-list>
     </div>
@@ -50,7 +50,7 @@ export default {
       }
     }
   },
-  mounted () {
+  activated () {
     this.getDetailInfo()
   }
 }
